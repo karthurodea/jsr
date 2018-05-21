@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+  <head>
+    <title>Dice Roller</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Dice Roller</h1>
+      </header>
+      <section id="content">
+        <span class="dice dice-2" id="first-die"></span>
+        <span class="dice dice-3" id="second-die"></span>
+        <input id="roll-dice" type="button" value="Roll the Dice" onclick="myFunction()">
+      </section>
+    </div>
+  <script>  
+    function myFunction() {
+      var random1 = Math.floor(Math.random() * 6) + 1;
+      var random2 = Math.floor(Math.random() * 6) + 1;
+      var firstDie = "dice-";
+      var secondDie = "dice-";
+      var randomFirstdie = firstDie + random1;
+      var randomSeconddie = secondDie + random2;
+      document.getElementById("first-die").className = randomFirstdie;
+      document.getElementById("second-die").className = randomSeconddie;
+    }
+  </script>
+  </body>
+</html>
+
